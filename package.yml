@@ -1,0 +1,20 @@
+package: sachspende
+version: 0.1
+author: Wolfgang Bund
+supportpage: https://github.com/redaxo/redaxo
+
+page:
+    title: 'Sachspende'
+    perm: sachspende
+    pjax: true
+    icon: rex-icon fa-calendar
+    subpages:
+        settings: { title: 'Einstellungen' }
+        setup: { title: 'Setup' }
+
+requires:
+    php:
+        version: '>=7.3'
+    redaxo: ">=5.8.0"
+    packages:
+        yform: '>=4.0'
