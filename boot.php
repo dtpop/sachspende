@@ -5,6 +5,7 @@ rex_yform_manager_dataset::setModelClass('rex_saspe_order', saspe_order::class);
 
 
 if (rex::isFrontend()) {
+    rex_login::startSession();
     if (rex_request('addon') == 'saspe' && rex_request('action') == 'optin' && rex_request('key','string','')) {
         $item = saspe_order::get_query()->where('key',rex_request('key'))->where('optin',0)->findOne();
         if ($item) {
