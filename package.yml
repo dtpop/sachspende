@@ -22,4 +22,4 @@ requires:
         version: '>=7.3'
     redaxo: ">=5.8.0"
     packages:
-        yform: '>=4.0'
+        yform: '>=3.4'
