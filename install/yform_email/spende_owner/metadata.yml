@@ -1,6 +1,6 @@
 name: spende_owner
-mail_from: webserver@dtp-net.de
-mail_from_name: 'Caritas Ruhr'
+mail_from: sender@example.com
+mail_from_name: 'Musterkunde'
 mail_reply_to: 'REX_YFORM_DATA[field="email"]'
 mail_reply_to_name: 'REX_YFORM_DATA[field="firstname"] REX_YFORM_DATA[field="lastname"]'
 subject: 'Neue Spende eingetroffen'

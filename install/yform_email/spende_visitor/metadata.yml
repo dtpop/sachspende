@@ -1,6 +1,6 @@
 name: spende_visitor
-mail_from: caritas@dtp-net.de
-mail_from_name: 'Ihre Caritas'
+mail_from: mail@example.com
+mail_from_name: 'Ihr Musterkunde'
 mail_reply_to: ''
 mail_reply_to_name: ''
 subject: 'Vielen Dank - bitte bestätigen Sie Ihre Spende!'
