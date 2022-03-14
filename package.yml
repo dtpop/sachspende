@@ -11,6 +11,11 @@ page:
     subpages:
         settings: { title: 'Einstellungen' }
         setup: { title: 'Setup' }
+        help:  
+            title: 'Hilfe'
+            icon: rex-icon fa-question-circle
+            itemclass: pull-right
+            subPath: README.md
 
 requires:
     php:
