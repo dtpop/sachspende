@@ -25,16 +25,18 @@ class saspe_base {
         $query = saspe_things::get_query();
         $order = [];
         foreach ($orderform as $k=>$v) {
-            preg_match('/spende_([\d.*?])/',$k,$matches);
+            preg_match('/spende_([\d].*?)$/',$k,$matches);
             if ($matches) {
                 $item = $query->resetWhere()->where('id',$matches[1])->findOne();
                 if ($item) {
                     $item->order_count = $v;
-                    $item->order_line = $v.' '.$item->unit.' '.$item->name_1;
+                   // $item->order_line = $item->name_1.': '.$v.' '.$item->unit.PHP_EOL.'Für:'.$item->for.PHP_EOL.PHP_EOL;
+					$item->order_line = $item->name_1.': '.$v.' '.$item->unit;
                     $order[$item->id] = $item;
                 }
             }
         }
+		dump($order);
         return $order;
     }
 
