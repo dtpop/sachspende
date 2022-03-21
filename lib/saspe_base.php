@@ -8,7 +8,7 @@ class saspe_base {
         $vars['order_text'] = '';
         // 0-Anzahl Spenden raus.
         foreach ($vars as $k=>$v) {
-            preg_match('/spende_([\d.*?])/',$k,$matches);
+            preg_match('/spende_([\d].*?)$/',$k,$matches);
             if ($matches && isset($matches[1]) && $matches[1]) {
                 if (!$v) {
                     unset($vars[$k]);
@@ -46,7 +46,7 @@ class saspe_base {
         $values = $p4->params['values'];
         foreach ($values as $val) {
             $name = $val->name;
-            preg_match('/spende_([\d.*?])/',$name,$matches);
+            preg_match('/spende_([\d].*?)$/',$name,$matches);
             if ($matches && isset($matches[1]) && $matches[1]) {
                 if ($val->value) {
                     return false;
