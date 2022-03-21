@@ -36,7 +36,6 @@ class saspe_base {
                 }
             }
         }
-		dump($order);
         return $order;
     }
 
